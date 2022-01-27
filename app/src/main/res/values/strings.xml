@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">cisojr4droid</string>
+    <string name="iso_to_cso">Compress iso to cso</string>
+    <string name="cso_to_iso">Decompress cso to iso</string>
+    <string name="input_filename">Input filename: %s</string>
+    <string name="output_filename">Output filename: %s</string>
+    <string name="select_input_filename">Select an input %s file</string>
+    <string name="select_input_warning">Please select an input file before doing this operation</string>
+    <string name="select_save_warning">Please select a save location before doing this operation</string>
+    <string name="select_save_location">Select a save location</string>
+    <string name="compress">compress</string>
+    <string name="decompress">Decompress</string>
+    <string name="select_compression">Select compression level</string>
+    <string name="compression_levels">Compression levels from 1 to 9</string>
+    <string name="compression_completed">Compression of %s completed</string>
+    <string name="decompression_completed">Decompression of %s completed</string>
+    <string name="compressing">Compressing %s%%</string>
+    <string name="decompressing">Decompressing %s%%</string>
+    <string-array name="compression_levels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>
