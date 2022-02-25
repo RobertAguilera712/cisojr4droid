@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
+import io.github.robertaguilera712.cisojr4droid.R;
 import io.github.robertaguilera712.cisojr4droid.databinding.RomBinding;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 

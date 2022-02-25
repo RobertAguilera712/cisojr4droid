@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,6 +10,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import io.github.robertaguilera712.cisojr4droid.adapters.MyAdapter;
+import io.github.robertaguilera712.cisojr4droid.R;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.dialogs.EditRomDialog;
 
 public class RecyclerViewUtils {
     private final ArrayList<Rom> roms;

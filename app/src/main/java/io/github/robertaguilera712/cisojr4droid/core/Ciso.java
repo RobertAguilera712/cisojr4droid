@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.core;
 
 import android.os.Handler;
 import android.util.Log;
@@ -12,6 +12,10 @@ import java.util.Arrays;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
+
+import io.github.robertaguilera712.cisojr4droid.model.Cso;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
 
 public class Ciso {
 

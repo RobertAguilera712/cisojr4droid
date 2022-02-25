@@ -11,17 +11,17 @@
         android:resizeableActivity="false"
         android:theme="@style/Theme.Cisojr4droid">
         <activity
-            android:name=".DecompressionActivity"
+            android:name=".activities.DecompressionActivity"
             android:label="@string/cso_to_iso"
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity
-            android:name=".CompressionActivity"
+            android:name=".activities.CompressionActivity"
             android:label="@string/iso_to_cso"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

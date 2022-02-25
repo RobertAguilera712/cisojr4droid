@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
+import io.github.robertaguilera712.cisojr4droid.R;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
 import io.github.robertaguilera712.cisojr4droid.databinding.DialogEditRomBinding;
 
 public class EditRomDialog extends DialogFragment {

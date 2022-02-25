@@ -1,4 +1,6 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.utils;
+
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
 
 public class Callback {
 

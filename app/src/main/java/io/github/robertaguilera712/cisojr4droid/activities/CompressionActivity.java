@@ -1,10 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.os.HandlerCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+package io.github.robertaguilera712.cisojr4droid.activities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,11 +9,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import io.github.robertaguilera712.cisojr4droid.databinding.ActivityDecompressionBinding;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.os.HandlerCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-public class DecompressionActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+import io.github.robertaguilera712.cisojr4droid.utils.CompressionUtils;
+import io.github.robertaguilera712.cisojr4droid.utils.FileUtils;
+import io.github.robertaguilera712.cisojr4droid.utils.GuiUtils;
+import io.github.robertaguilera712.cisojr4droid.R;
+import io.github.robertaguilera712.cisojr4droid.utils.RecyclerViewUtils;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.dialogs.SettingsDialog;
+import io.github.robertaguilera712.cisojr4droid.databinding.ActivityCompressionBinding;
 
-    private ActivityDecompressionBinding binding;
+public class CompressionActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+
+    private ActivityCompressionBinding binding;
     private RecyclerViewUtils recyclerViewUtils;
     private FileUtils fileUtils;
     private CompressionUtils compressionUtils;
@@ -29,13 +36,13 @@ public class DecompressionActivity extends AppCompatActivity implements SwipeRef
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityDecompressionBinding.inflate(getLayoutInflater());
+        binding = ActivityCompressionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar2);
         setRomOptions();
         Handler mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
         sharedPreferences = getPreferences(Context.MODE_PRIVATE);
-        recyclerViewUtils = new RecyclerViewUtils(binding.rvRoms, true, new LinearLayoutManager(this), sharedPreferences, this, getSupportFragmentManager(), mainThreadHandler, this::setActionsEnable);
+        recyclerViewUtils = new RecyclerViewUtils(binding.rvRoms, false, new LinearLayoutManager(this), sharedPreferences, this, getSupportFragmentManager(), mainThreadHandler, this::setActionsEnable);
         fileUtils = new FileUtils(getActivityResultRegistry(), getContentResolver(), sharedPreferences, this, recyclerViewUtils);
         getLifecycle().addObserver(fileUtils);
         compressionUtils = new CompressionUtils(sharedPreferences, recyclerViewUtils, this, mainThreadHandler, this::setActionsEnable);
@@ -44,10 +51,10 @@ public class DecompressionActivity extends AppCompatActivity implements SwipeRef
 
     private void setRomOptions() {
         Rom.setResolver(getContentResolver());
-        Rom.setOutputMimeType(getString(R.string.iso_mime_type));
-        Rom.setInputMimeType(getString(R.string.cso_mime_type));
-        Rom.setOutputFileExtension(getString(R.string.iso_extension));
-        Rom.setInputFileExtension(getString(R.string.cso_extension));
+        Rom.setOutputMimeType(getString(R.string.cso_mime_type));
+        Rom.setInputMimeType(getString(R.string.iso_mime_type));
+        Rom.setOutputFileExtension(getString(R.string.cso_extension));
+        Rom.setInputFileExtension(getString(R.string.iso_extension));
     }
 
     private void setActionsEnable(boolean enable) {
@@ -83,10 +90,10 @@ public class DecompressionActivity extends AppCompatActivity implements SwipeRef
             fileUtils.selectRomsFolder();
             return true;
         } else if (itemId == R.id.menu_compress) {
-            compressionUtils.batchDecompression();
+            compressionUtils.batchCompression();
             return true;
         } else if (itemId == R.id.menu_settings) {
-            SettingsDialog dialog = new SettingsDialog(sharedPreferences, true, this::applySettings);
+            SettingsDialog dialog = new SettingsDialog(sharedPreferences,false, this::applySettings);
             dialog.show(getSupportFragmentManager(), "settings");
             return true;
         } else if (itemId == R.id.menu_refresh) {
@@ -115,9 +122,9 @@ public class DecompressionActivity extends AppCompatActivity implements SwipeRef
 
     @Override
     public void onBackPressed() {
-        if (buttonsEnabled) {
+        if (buttonsEnabled){
             super.onBackPressed();
-        } else {
+        }else{
             Toast.makeText(this, R.string.going_back_warning, Toast.LENGTH_LONG).show();
         }
     }

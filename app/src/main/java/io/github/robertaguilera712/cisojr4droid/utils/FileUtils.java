@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.utils;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -19,6 +19,9 @@ import androidx.lifecycle.LifecycleOwner;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.robertaguilera712.cisojr4droid.R;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
 
 public class FileUtils implements DefaultLifecycleObserver {
     private final ActivityResultRegistry mRegistry;

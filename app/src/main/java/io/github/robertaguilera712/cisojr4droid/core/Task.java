@@ -1,6 +1,9 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.core;
 
 import android.os.Handler;
+
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
 
 public class Task {
 

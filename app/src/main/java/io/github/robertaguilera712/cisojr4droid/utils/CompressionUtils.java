@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,6 +8,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import io.github.robertaguilera712.cisojr4droid.core.CompressionTask;
+import io.github.robertaguilera712.cisojr4droid.core.DecompressionTask;
+import io.github.robertaguilera712.cisojr4droid.R;
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.core.Task;
 
 public class CompressionUtils {
     private final SharedPreferences sharedPreferences;

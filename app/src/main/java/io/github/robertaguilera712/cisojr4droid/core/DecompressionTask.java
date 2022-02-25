@@ -1,7 +1,10 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.core;
 
 import java.io.IOException;
 import java.util.zip.DataFormatException;
+
+import io.github.robertaguilera712.cisojr4droid.model.Rom;
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
 
 public class DecompressionTask extends Task implements Runnable {
 

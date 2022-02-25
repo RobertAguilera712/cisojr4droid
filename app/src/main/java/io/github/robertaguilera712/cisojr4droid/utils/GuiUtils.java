@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.utils;
 
 import android.graphics.drawable.Drawable;
 import android.view.MenuItem;

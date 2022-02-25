@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

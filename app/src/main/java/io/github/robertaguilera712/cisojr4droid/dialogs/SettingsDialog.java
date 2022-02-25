@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.dialogs;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
+import io.github.robertaguilera712.cisojr4droid.utils.Callback;
+import io.github.robertaguilera712.cisojr4droid.R;
 import io.github.robertaguilera712.cisojr4droid.databinding.DialogSettingsBinding;
 
 public class SettingsDialog extends DialogFragment {

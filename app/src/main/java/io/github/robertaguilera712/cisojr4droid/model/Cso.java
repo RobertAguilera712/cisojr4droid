@@ -1,6 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
-
-import android.util.Log;
+package io.github.robertaguilera712.cisojr4droid.model;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,16 +8,16 @@ import java.nio.ByteOrder;
 
 public class Cso {
 
-    final int MAGIC = 0x4F534943;
-    final int HEADER_SIZE = 0x18;
-    final int BLOCK_SIZE = 0x800;
-    final int PLAIN_BLOCK = 0x80000000;
-    final byte ALIGN = 0;
-    final byte VERSION = 0;
-    final long TOTAL_BYTES;
-    final int TOTAL_BLOCKS;
-    final int BLOCK_INDEX_LENGTH;
-    final int BLOCK_INDEX_SIZE;
+    public final int MAGIC = 0x4F534943;
+    public final int HEADER_SIZE = 0x18;
+    public final int BLOCK_SIZE = 0x800;
+    public final int PLAIN_BLOCK = 0x80000000;
+    public final byte ALIGN = 0;
+    public final byte VERSION = 0;
+    public final long TOTAL_BYTES;
+    public final int TOTAL_BLOCKS;
+    public final int BLOCK_INDEX_LENGTH;
+    public final int BLOCK_INDEX_SIZE;
 
     public Cso(final long totalBytes) {
         TOTAL_BYTES = totalBytes;
@@ -69,20 +67,5 @@ public class Cso {
 
         return blockIndex;
     }
-
-//    private boolean checkHeader(final FileInputStream in) throws IOException {
-//        final ByteBuffer buffer = ByteBuffer.allocate(HEADER_SIZE);
-//        buffer.order(ByteOrder.LITTLE_ENDIAN);
-//        final byte[] headerBytes = new byte[HEADER_SIZE];
-//        in.read(headerBytes);
-//        buffer.put(headerBytes);
-//        buffer.position(0);
-//        final int magic = buffer.getInt();
-//        buffer.position(8);
-//        final long totalBytes = buffer.getLong();
-//        final int blockSize = buffer.getInt();
-//
-//        return  (magic == MAGIC || blockSize != 0 || totalBytes != 0);
-//    }
 
 }

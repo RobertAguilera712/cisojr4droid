@@ -1,4 +1,4 @@
-package io.github.robertaguilera712.cisojr4droid;
+package io.github.robertaguilera712.cisojr4droid.model;
 
 import android.content.ContentResolver;
 import android.net.Uri;
