@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbInputFilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/input_filename"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvInputFilename"
+            app:layout_constraintEnd_toStartOf="@+id/tvInputFilename"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvInputFilename" />
+
+        <TextView
+            android:id="@+id/lbOutputFilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/output_filename"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOutputFilename"
+            app:layout_constraintEnd_toStartOf="@+id/tvOutputFilename"
+            app:layout_constraintStart_toStartOf="@+id/lbInputFilename"
+            app:layout_constraintTop_toTopOf="@+id/tvOutputFilename" />
+
+        <TextView
+            android:id="@+id/tvInputFilename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lbInputFilename"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="MotorStorm - Arctic Edge (USA) (En,Fr,De,Es,It,Nl,Pt,Ru).iso" />
+
+        <TextView
+            android:id="@+id/tvOutputFilename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lbOutputFilename"
+            app:layout_constraintTop_toBottomOf="@+id/tvInputFilename"
+            tools:text="MotorStorm - Arctic Edge (USA) (En,Fr,De,Es,It,Nl,Pt,Ru).cso" />
+
+        <TextView
+            android:id="@+id/lbCompressionLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/compression_level"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/lbDelete"
+            app:layout_constraintTop_toBottomOf="@+id/lbDelete" />
+
+        <TextView
+            android:id="@+id/tvCompressionLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbCompressionLevel"
+            app:layout_constraintStart_toEndOf="@+id/lbCompressionLevel"
+            app:layout_constraintTop_toTopOf="@+id/lbCompressionLevel"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/lbDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/delete_after_conversion"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/lbOutputFilename"
+            app:layout_constraintTop_toBottomOf="@+id/tvOutputFilename" />
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbDelete"
+            app:layout_constraintStart_toEndOf="@+id/lbDelete"
+            app:layout_constraintTop_toTopOf="@+id/lbDelete"
+            tools:text="yes" />
+
+        <TextView
+            android:id="@+id/lbStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/status"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="@+id/lbCompressionLevel"
+            app:layout_constraintTop_toBottomOf="@+id/lbCompressionLevel" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lbStatus"
+            app:layout_constraintTop_toTopOf="@+id/lbStatus"
+            tools:text="Compressing 100% completed" />
+
+        <ProgressBar
+            android:id="@+id/compressionProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

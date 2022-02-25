@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">cisojr4droid</string>
+    <string name="iso_to_cso">Convertir iso a cso</string>
+    <string name="cso_to_iso">Convertir cso a iso</string>
+    <string name="open_roms">Seleccionar carpeta</string>
+    <string name="no_roms_folder">No hay carpeta seleccionada</string>
+    <string name="convert">Empezar conversion</string>
+    <string name="settings">Configuración global</string>
+    <string name="menu_refresh">Recargar archivos en carpeta seleccionada</string>
+    <string name="input_filename">Nombre del archivo de entrada:</string>
+    <string name="output_filename">Nombre del archivo de salida:</string>
+    <string name="dialog_save_button">Guardar</string>
+    <string name="dialog_cancel_button">Cancelar</string>
+    <string name="delete_after_conversion">Eliminar después de conversión:</string>
+    <string name="delete_true">Si</string>
+    <string name="delete_false">No</string>
+    <string name="delete_after_general">¿Eliminar los archivos de entrada después de la conversión?</string>
+    <string name="delete_after_single">¿Eliminar el archivo de entrada después de la conversión?</string>
+    <string name="status">Estatus:</string>
+    <string name="compression_level">Nivel de compresión:</string>
+    <string name="status_added">Añadido</string>
+    <string name="status_queue">En espera</string>
+    <string name="status_converting">Convirtiendo %.2f%% completado</string>
+    <string name="status_conversion_finished">Conversión finalizada</string>
+    <string name="no_files_warning">Por favor añada archivos antes de realizar esta operación</string>
+    <string name="settings_message">Cambiar esta configuración afectará a todos los archivos añadidos y será aplicada por defecto a los archivos añadidos posteriormente.</string>
+    <string name="simultaneous_tasks">Tareas simultaneas:</string>
+    <string name="going_back_warning">Por favor espere a que las tareas de compresión finalicen. Si quiere usar otra aplicación presione el boton home.</string>
+</resources>

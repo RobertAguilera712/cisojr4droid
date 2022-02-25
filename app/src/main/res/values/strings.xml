@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">CISOjr4DROID</string>
+    <string name="iso_to_cso">Convert iso to cso</string>
+    <string name="cso_to_iso">Convert cso to iso</string>
+    <string name="open_roms">Select folder</string>
+    <string name="no_roms_folder">No folder selected</string>
+    <string name="convert">Begin conversion</string>
+    <string name="settings">Global settings</string>
+    <string name="menu_refresh">Refresh files in selected folder</string>
+    <string name="input_filename">Input filename:</string>
+    <string name="output_filename">Output filename:</string>
+    <string name="dialog_save_button">Save</string>
+    <string name="dialog_cancel_button">Cancel</string>
+    <string name="delete_after_conversion">Delete after conversion:</string>
+    <string name="delete_true">Yes</string>
+    <string name="delete_false">No</string>
+    <string name="delete_after_general">Delete input files after conversion?</string>
+    <string name="delete_after_single">Delete input file after conversion?</string>
+    <string name="status">Status:</string>
+    <string name="compression_level">Compression level:</string>
+    <string name="status_added">Added</string>
+    <string name="status_queue">Queue</string>
+    <string name="status_converting">Converting %.2f%% completed</string>
+    <string name="status_conversion_finished">Conversion finished</string>
+    <string name="no_files_warning">Please add files before doing this operation</string>
+    <string name="going_back_warning">Please wait until the conversion tasks are complete. If you want to use another app press the home button.</string>
+    <string name="settings_message">Changing this settings will affect all files added, and will apply as default to new files added in the future.</string>
+    <string name="simultaneous_tasks">Simultaneous tasks:</string>
+    <string-array name="compression_levels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <!--    do not change-->
+    <string name="cso_extension" translatable="false">.cso</string>
+    <string name="iso_extension" translatable="false">.iso</string>
+    <string name="saved_compression_level_key" translatable="false">compressionLevel</string>
+    <string name="saved_delete_after_key" translatable="false">deleteAfter</string>
+    <string name="saved_simultaneous_tasks_key" translatable="false">simultaneousTasks</string>
+    <string name="iso_mime_type" translatable="false">application/x-iso9660-image</string>
+    <string name="cso_mime_type" translatable="false">application/octet-stream</string>
+</resources>
