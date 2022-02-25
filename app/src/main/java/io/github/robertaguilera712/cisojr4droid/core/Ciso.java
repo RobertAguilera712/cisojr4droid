@@ -1,7 +1,6 @@
 package io.github.robertaguilera712.cisojr4droid.core;
 
 import android.os.Handler;
-import android.util.Log;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

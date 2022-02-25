@@ -56,7 +56,7 @@ public class Cso {
         ByteBuffer buffer = ByteBuffer.allocate(BLOCK_INDEX_SIZE);
         buffer.order(ByteOrder.LITTLE_ENDIAN);
         final byte[] blockIndexBytes = new byte[BLOCK_INDEX_SIZE];
-        int bytes = in.read(blockIndexBytes);
+        in.read(blockIndexBytes);
         buffer.put(blockIndexBytes);
         buffer.position(0);
         final int[] blockIndex = new int[BLOCK_INDEX_LENGTH];
