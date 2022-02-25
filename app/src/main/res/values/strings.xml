@@ -11,7 +11,7 @@
     <string name="output_filename">Output filename:</string>
     <string name="dialog_save_button">Save</string>
     <string name="dialog_cancel_button">Cancel</string>
-    <string name="delete_after_conversion">Delete after conversion:</string>
+    <string name="delete_after_conversion">Delete input file after conversion:</string>
     <string name="delete_true">Yes</string>
     <string name="delete_false">No</string>
     <string name="delete_after_general">Delete input files after conversion?</string>

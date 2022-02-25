@@ -90,7 +90,7 @@ public class Ciso {
         rom.initStreams();
         final FileInputStream in = rom.getIn();
         final FileOutputStream out = rom.getOut();
-        final Cso cso = checkHeader(in);
+        final Cso cso = new Cso(getTotalBytes(in));
         final int[] blockIndex = cso.getBlockIndex(in);
         final Inflater decompressor = new Inflater(true);
 
@@ -111,12 +111,6 @@ public class Ciso {
 
             byte[] rawData = seekAndRead(in, readPosition, readSize);
             byte[] decompressedData;
-            int rawDataSize = rawData.length;
-
-            if (rawDataSize != readSize) {
-                Log.e("ERORRR", "valio madre");
-                System.exit(1);
-            }
 
             if (plain != 0) {
                 decompressedData = rawData;
@@ -146,24 +140,14 @@ public class Ciso {
         return bytes;
     }
 
-    private static Cso checkHeader(final FileInputStream in) throws IOException {
+    private static long getTotalBytes(final FileInputStream in) throws IOException {
         final ByteBuffer buffer = ByteBuffer.allocate(24);
         buffer.order(ByteOrder.LITTLE_ENDIAN);
         final byte[] headerBytes = new byte[24];
         in.read(headerBytes);
         buffer.put(headerBytes);
-        buffer.position(0);
-        final int magic = buffer.getInt();
-        buffer.position(8);
-        final long totalBytes = buffer.getLong();
-        final int blockSize = buffer.getInt();
 
-        if (magic != 0x4F534943 || blockSize == 0 || totalBytes == 0) {
-            Log.e("ERORRR", "no cso valio madre");
-            System.exit(1);
-        }
-
-        return new Cso(totalBytes);
+        return buffer.getLong(8);
     }
 
 

@@ -12,7 +12,7 @@
     <string name="output_filename">Nombre del archivo de salida:</string>
     <string name="dialog_save_button">Guardar</string>
     <string name="dialog_cancel_button">Cancelar</string>
-    <string name="delete_after_conversion">Eliminar después de conversión:</string>
+    <string name="delete_after_conversion">Eliminar archivo de entrada después de conversión:</string>
     <string name="delete_true">Si</string>
     <string name="delete_false">No</string>
     <string name="delete_after_general">¿Eliminar los archivos de entrada después de la conversión?</string>
