@@ -16,6 +16,8 @@
         <entry key="app/src/main/res/layout/rom.xml" value="0.5" />
         <entry key="app/src/main/res/menu/compression_menu.xml" value="0.33" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19537037037037036" />
       </map>
     </option>
   </component>
