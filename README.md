@@ -1,6 +1,11 @@
 ![](img/banner.png)
 
+
 This android app allows you to convert iso to cso files. It is based on [jamie/ciso](https://github.com/jamie/ciso) and [phyber/ciso](https://github.com/phyber/ciso)
+
+- [Screenshots](#screenshots)
+- [Showcase video](#showcase-video)
+- [Download](#download)
 
 ## Screenshots
 
