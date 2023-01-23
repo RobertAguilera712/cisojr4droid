@@ -95,7 +95,7 @@ public class FileUtils implements DefaultLifecycleObserver {
                         final String fileName = file.getName();
                         final String fileExtension = fileName.substring(fileName.lastIndexOf("."));
                         final String fileMimeType = file.getType();
-                        if (inputMimeType.equals(fileMimeType) && inputFileExtension.equals(fileExtension)) {
+                        if (inputMimeType.equals(fileMimeType) && inputFileExtension.equals(fileExtension.toLowerCase())) {
                             final Uri inputUri = file.getUri();
                             final String inputFilename = file.getName();
                             final String outputFilename = inputFilename.replaceFirst(inputFileExtension + "$", outputFileExtension);
